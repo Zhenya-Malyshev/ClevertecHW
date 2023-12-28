@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "917fbb3d-2815-4338-815b-c72b47e4a450",
+		"name": "Homework Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31987410"
+	},
+	"item": [
+		{
+			"name": "post_news_report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"В США криптокомпании резко увеличили финансирование политиков - 28-12-2023\",\n    \"text\": \"Криптокомпании резко увеличили финансирование американских политиков для того, чтобы пролоббировать свои интересы в Конгрессе США. Об этом сообщает газета Financial Times\",\n    \"userName\": \"Малышев Евгений Анатольевич\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/news_applications/v1/news"
+			},
+			"response": []
+		},
+		{
+			"name": "get_news_report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/news_applications/v1/news/119"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_news_report (duplicate)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"В США криптокомпании резко увеличили финансирование политиков - 27-12-2023\",\n    \"text\": \"Криптокомпании резко увеличили финансирование американских политиков для того, чтобы пролоббировать свои интересы в Конгрессе США. Об этом сообщает газета Financial Times\",\n    \"userName\": \"Малышев Евгений Анатольевич\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/news_applications/v1/news/80"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://93.84.86.69:9099",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
